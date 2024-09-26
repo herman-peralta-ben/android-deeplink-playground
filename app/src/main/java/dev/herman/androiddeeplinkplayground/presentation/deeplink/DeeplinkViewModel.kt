@@ -1,4 +1,4 @@
-package dev.herman.androiddeeplinkplayground
+package dev.herman.androiddeeplinkplayground.presentation.deeplink
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel

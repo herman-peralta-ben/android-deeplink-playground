@@ -1,10 +1,8 @@
-package dev.herman.androiddeeplinkplayground
+package dev.herman.androiddeeplinkplayground.presentation.deeplink
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Space
-
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -12,7 +10,6 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +18,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Card
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -67,7 +63,7 @@ class DeeplinkActivity : ComponentActivity() {
                             .padding(innerPadding)
                             .fillMaxSize()
                     ) {
-                        Content(state)
+                        DeeplinkScreenContent(state)
                     }
 
                 }
@@ -101,7 +97,7 @@ class DeeplinkActivity : ComponentActivity() {
 }
 
 @Composable
-private fun Content(state: DeeplinkState) {
+private fun DeeplinkScreenContent(state: DeeplinkState) {
     Box(modifier = Modifier.padding(16.dp)) {
         when (state) {
             is DeeplinkState.NoDeeplink -> {
