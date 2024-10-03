@@ -50,7 +50,7 @@ class DeeplinkActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        parseDeeplink("onCreate")
+        parseDeeplink(intent, "onCreate")
 
         enableEdgeToEdge()
         setContent {
@@ -82,10 +82,10 @@ class DeeplinkActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
 
-        parseDeeplink("onNewIntent")
+        parseDeeplink(intent, "onNewIntent")
     }
 
-    private fun parseDeeplink(source: String) {
+    private fun parseDeeplink(intent: Intent, source: String) {
         val action = intent.action
         val uri = intent.data
 
