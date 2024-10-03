@@ -1,6 +1,6 @@
 # Android deep links playground
 
-![Demo](doc/CatchDeeplink.mp4)
+https://github.com/herman-peralta-ben/android-deeplink-playground/blob/main/doc/CatchDeeplink.mp4
 
 Use the following command to launch a deeplink:
 ```bash
