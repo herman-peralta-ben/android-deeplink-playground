@@ -40,6 +40,20 @@
                 <data android:host="www.testing.com" />
                 <data android:host="test-playground" />
             </intent-filter>
+
+            <!-- Accepts URIs that begin with "http://www.example.com/testing" and "https://www.example.com/testing" -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.example.com" />
+                <data android:pathPrefix="/testing" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+            </intent-filter>
         </activity>
     </application>
 </manifest>
