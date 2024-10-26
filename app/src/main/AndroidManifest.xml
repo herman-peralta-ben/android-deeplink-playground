@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="testing" />
+                <data android:scheme="androiddeeplinkplayground" />
                 <data android:host="www.testing.com" />
                 <data android:host="test-playground" />
             </intent-filter>

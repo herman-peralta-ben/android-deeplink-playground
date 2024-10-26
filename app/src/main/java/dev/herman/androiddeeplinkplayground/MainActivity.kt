@@ -29,11 +29,11 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = {
                             val intent = Intent(
                                 Intent.ACTION_VIEW,
-                                Uri.parse("testing://www.testing.com/abc?name=herman&hobbies=coding,drums,games&age=36")
+                                Uri.parse("androiddeeplinkplayground://www.testing.com/abc?name=herman&hobbies=coding,drums,games&age=36")
                             )
                             startActivity(intent)
                         }) {
-                            Text(text = "Launch testing:// intent")
+                            Text(text = "Launch androiddeeplinkplayground:// intent")
                         }
                     }
                 }
